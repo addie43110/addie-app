@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './Home.css';
+import './Main.css';
 
 function Home(props) {
-  const [apiResponse, setapiResponse] = useState("");
-
-  useEffect(() => {
-    callAPI();
-  }, []);
-
-  
-  function callAPI() {
-    fetch("http://localhost:3001/home")
-      .then(res => res.text())
-      .then(res => setapiResponse(res));
-  }
 
   return (
-    <div className="welcome-container">
-      <p>apiResponse: {apiResponse}</p>
+    <div className="text-container">
       <h2>Welcome!</h2>
       <p>
-        Thanks for checking out my Resumesite 2.0. Resumesite 1.0 was originally written entirely by hand in HTML, CSS, and
-        Javascript; In 2020, I was lucky to intern with Daitan Labs of Canada and learned React and Express there, so I 
+        Thanks for checking out my Resumesite 2.0. Resumesite 1.0 was originally written entirely by hand in vanilla HTML, CSS, and
+        Javascript (weird flex but ok); In 2020, I was lucky to intern with Daitan Labs of Canada and learned React and Express there, so I 
         figured it was time for a website revamp.
+      </p>
+      <p>
+        Ip
       </p>
     </div>
   );
